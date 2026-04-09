@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diana Water</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1f3a5f;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(180deg, #eaf9fd, #ffffff);
+}
+
+.logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 18px;
+    color: #4a6572;
+}
+
+.title {
+    font-size: 34px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Story */
+.story {
+    background: #ffffff;
+}
+
+.story h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.story p {
+    max-width: 520px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #4a6572;
+}
+
+/* 🔥 Premium Glass Footer */
+.footer {
+    position: relative;
+    text-align: center;
+    font-size: 13px;
+    padding: 25px 20px;
+    line-height: 1.6;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0.45)
+    );
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -6px 25px rgba(0, 0, 0, 0.04);
+
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Noise Texture */
+.footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/noise.png");
+    opacity: 0.04;
+    pointer-events: none;
+}
+
+/* Footer links */
+.footer a {
+    color: #2b3a42;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.elite {
+    margin-top: 14px;
+}
+
+.elite img {
+    width: 90px;
+}
+
+.elite-text {
+    font-size: 11px;
+    margin-top: 4px;
+    letter-spacing: 0.6px;
+    color: #0b5d3b;
+}
+
+/* Sound Toggle */
+.sound-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sound-toggle" id="soundToggle">🔊</div>
+
+<audio id="waterSound" loop muted>
+    <source src="water.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO -->
+<section class="section hero">
+    <img src="logo.png" class="logo">
+    <div class="tagline">Pure Hydration</div>
+    <div class="title">Website Coming Soon</div>
+</section>
+
+<!-- STORY -->
+<section class="section story">
+    <h2>Born from Nature</h2>
+    <p>
+        Diana Water is inspired by the idea of untouched purity — water that feels light, balanced, 
+        and naturally refreshing. Carefully processed and protected, every drop is crafted to deliver 
+        a clean and consistent experience.
+        <br><br>
+        Designed for those who value quality in its simplest form, Diana represents clarity, trust, 
+        and a refined approach to everyday hydration.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div>
+        <a href="mailto:info@dianawater.in">info@dianawater.in</a> · 
+        <a href="tel:+917795288098">+91 7795288098</a>
+    </div>
+
+    <div class="elite">
+        <img src="elite.png">
+        <div class="elite-text">An Elite Enterprise Company</div>
+    </div>
+</div>
+
+<script>
+const audio = document.getElementById("waterSound");
+const toggle = document.getElementById("soundToggle");
+
+// Try autoplay (muted allowed)
+audio.play().catch(() => {});
+audio.volume = 0.25;
+
+// Enable sound on first interaction
+document.addEventListener("click", () => {
+    audio.muted = false;
+}, { once: true });
+
+// Toggle sound
+toggle.addEventListener("click", () => {
+    if (audio.muted) {
+        audio.muted = false;
+        toggle.textContent = "🔊";
+    } else {
+        audio.muted = true;
+        toggle.textContent = "🔇";
+    }
+});
+
+// Scroll reactive footer
+const footer = document.querySelector(".footer");
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const intensity = Math.min(scrollY / 600, 1);
+
+    footer.style.backdropFilter = `blur(${12 + intensity * 6}px)`;
+    footer.style.background = `linear-gradient(
+        to bottom,
+        rgba(255,255,255,${0.75 + intensity * 0.1}),
+        rgba(255,255,255,${0.45 + intensity * 0.1})
+    )`;
+});
+</script>
+
+</body>
+</html>
