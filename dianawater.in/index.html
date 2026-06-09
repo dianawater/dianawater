@@ -11,6 +11,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+    /* FACTORY CAROUSEL */
+.factory-carousel {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.factory-track {
+display: flex;
+width: 400%;
+animation: factorySlide 20s infinite;
+}
+
+.factory-track img {
+    width: 25%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+@keyframes factorySlide {
+0%,20% { transform: translateX(0); }
+25%,45% { transform: translateX(-25%); }
+50%,70% { transform: translateX(-50%); }
+75%,95% { transform: translateX(-75%); }
+100% { transform: translateX(0); }
+}
+
+@media(max-width:768px){
+.factory-track img{
+height:280px;
+}
+}
+
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
@@ -182,7 +217,7 @@ body {
 <!-- HERO -->
 <section class="hero fade-up">
     <img src="logo.png" class="logo">
-    <div class="tagline">Pure Hydration</div>
+    <div class="tagline">PURE HYDRATION</div>
     <div class="title">Website Coming Soon</div>
 </section>
 
@@ -215,6 +250,26 @@ body {
             <p>Balanced minerals deliver a smooth, clean, and refreshing drinking experience.</p>
         </div>
     </div>
+</section>
+
+<!-- FACTORY -->
+
+<section class="section fade-up">
+    <h2>Our Facility</h2>
+
+    <p style="max-width:850px;margin:25px auto 0;color:#5c7a90;line-height:1.9;font-size:15px;">
+    Take a look inside our facility, where every stage of production is carried out with a focus on purity, hygiene and consistency.
+    </p>
+
+    <div class="factory-carousel">
+        <div class="factory-track">
+            <img src="factory1.jpg" alt="Filling & Packaging">
+            <img src="factory2.jpg" alt="Reverse Osmosis System">
+            <img src="factory3.jpg" alt="Stock Area">
+            <img src="factory4.jpg" alt="Blow Moulding Unit">
+        </div>
+    </div>
+
 </section>
 
 <!-- PRODUCTS WITH AUTO MESSAGE -->
