@@ -1,477 +1,1357 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diana Water</title>
 
-<!-- FAVICON -->
-<link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Diana — Packaged Drinking Water</title>
 
-<style>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 
-/* PRODUCTS */
-.product-carousel {
-max-width: 1200px;
-margin: 60px auto 0;
-overflow: hidden;
-border-radius: 24px;
-box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
+    <meta name="description"
+        content="Premium packaged drinking water manufactured with advanced purification technology. Diana Water supplies purified bottled water for homes, offices, hotels, restaurants and events.">
 
-.product-track {
-display: flex;
-width: 400%;
-animation: productSlide 20s infinite;
-}
+    <meta name="keywords"
+        content="Packaged Drinking Water, Bottled Water, Diana Water, Mineral Water, Water Supplier">
 
-.product-slide {
-width: 25%;
-position: relative;
-text-decoration: none;
-transition: 0.4s;
-}
+    <link rel="icon" href="images/favicon.png">
 
-.product-slide:hover {
-transform: scale(1.02);
-}
+    <!-- Google Font -->
 
-.product-slide img {
-width: 100%;
-aspect-ratio: 16 / 9;
-object-fit: cover;
-display: block;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-.product-caption {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-background: rgba(0,0,0,0.55);
-color: white;
-padding: 18px;
-font-size: 16px;
-font-weight: 500;
-}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-@keyframes productSlide {
-0%,20% { transform: translateX(0); }
-25%,45% { transform: translateX(-25%); }
-50%,70% { transform: translateX(-50%); }
-75%,95% { transform: translateX(-75%); }
-100% { transform: translateX(0); }
-}
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
-.coming-soon-grid {
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-margin-top:50px;
-}
+    <!-- Font Awesome -->
 
-.coming-soon-card {
-background: rgba(255,255,255,0.55);
-backdrop-filter: blur(16px);
-padding:35px;
-width:270px;
-border-radius:22px;
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
-transition:0.4s;
-}
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-.coming-soon-card:hover {
-transform:translateY(-10px);
-}
+    <!-- Main CSS -->
 
+    <link rel="stylesheet" href="style.css">
 
-    /* FACTORY CAROUSEL */
-.factory-carousel {
-    max-width: 1200px;
-    margin: 60px auto 0;
-    overflow: hidden;
-    border-radius: 24px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-.factory-track {
-display: flex;
-width: 400%;
-animation: factorySlide 20s infinite;
-}
-
-.factory-track img {
-    width: 25%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-@keyframes factorySlide {
-0%,20% { transform: translateX(0); }
-25%,45% { transform: translateX(-25%); }
-50%,70% { transform: translateX(-50%); }
-75%,95% { transform: translateX(-75%); }
-100% { transform: translateX(0); }
-}
-
-@media(max-width:768px){
-.factory-track img{
-height:280px;
-}
-}
-
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-    font-family: 'Libre Franklin', sans-serif;
-    background: linear-gradient(180deg, #f3fbff, #ffffff);
-    color:#1f3a5f;
-}
-
-/* PRELOADER */
-#preloader {
-    position:fixed;
-    inset:0;
-    background:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-#preloader img { width:140px; margin-bottom:20px; }
-
-.loader-fill {
-    height:4px;
-    width:0%;
-    background:#ff6b81;
-    animation:load 2.5s linear forwards;
-}
-@keyframes load { to { width:100%; } }
-
-/* HERO */
-.hero {
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background: radial-gradient(circle at 50% 30%, #e6f7ff, #fff 70%);
-}
-
-.logo { width:160px; animation:breathe 5s ease-in-out infinite; }
-
-@keyframes breathe {
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.04);}
-}
-
-.tagline { margin-top:10px; color:#6b8ca6; }
-.title { font-size:36px; margin-top:10px; }
-
-/* SECTION */
-.section { padding:140px 20px; text-align:center; }
-
-/* ANIMATION */
-.fade-up {
-    opacity:0;
-    transform:translateY(50px);
-    transition:all 1s ease;
-}
-.fade-up.show {
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* CARDS */
-.card-container {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:40px;
-    margin-top:70px;
-}
-
-.card {
-    background: rgba(255,255,255,0.55);
-    backdrop-filter: blur(16px);
-    padding:35px;
-    width:270px;
-    border-radius:22px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-    transition: all 0.4s ease;
-}
-
-.card:hover {
-    transform: translateY(-12px) scale(1.03);
-}
-
-.card-icon {
-    font-size:34px;
-    margin-bottom:12px;
-}
-
-.card b {
-    display:block;
-    font-size:18px;
-    margin-bottom:8px;
-}
-
-.card p {
-    font-size:14px;
-    color:#5c7a90;
-    line-height:1.7;
-}
-
-/* CLICKABLE PRODUCT */
-.product {
-    text-decoration:none;
-    color:#1f3a5f;
-    display:block;
-}
-
-/* CONTACT */
-.contact-box {
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-    margin-top:60px;
-}
-
-.contact {
-    background: rgba(255,255,255,0.55);
-    backdrop-filter: blur(16px);
-    padding:30px;
-    border-radius:20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
-}
-
-.contact a {
-    text-decoration:none;
-    color:#1f3a5f;
-    font-weight:500;
-}
-
-/* WHATSAPP */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:14px 20px;
-    border-radius:50px;
-    text-decoration:none;
-}
-
-/* FOOTER */
-.footer {
-    text-align:center;
-    padding:60px 20px;
-    font-size:12px;
-    color:#6b8ca6;
-}
-
-.footer img {
-    width:90px;
-    margin-bottom:10px;
-}
-</style>
 </head>
 
 <body>
 
-<!-- PRELOADER -->
-<div id="preloader">
-    <img src="logo.png">
-    <div class="loader-fill"></div>
-</div>
+    <!-- ===========================
+            PRELOADER
+    ============================ -->
 
-<!-- HERO -->
-<section class="hero fade-up">
-    <img src="logo.png" class="logo">
-    <div class="tagline">PURE HYDRATION</div>
-    <div class="title">Website Coming Soon</div>
-</section>
+    <div id="preloader">
 
-<!-- PURE EXCELLENCE -->
-<section class="section fade-up">
-    <h2>Pure Water, Perfected</h2>
+        <img src="images/logo.png" alt="Diana Water">
 
-    <div class="card-container">
-        <div class="card">
-            <div class="card-icon">💧</div>
-            <b>Purified Source</b>
-            <p>Borewell water purified using advanced filtration for consistent safety and clarity.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">🛡️</div>
-            <b>Quality Assured</b>
-            <p>Strict quality checks ensure hygiene standards and reliable product consistency.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">🌱</div>
-            <b>Eco-Friendly</b>
-            <p>Sustainable packaging and responsible processes to reduce environmental impact.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">🏆</div>
-            <b>Premium Grade</b>
-            <p>Balanced minerals deliver a smooth, clean, and refreshing drinking experience.</p>
-        </div>
-    </div>
-</section>
-
-<!-- FACTORY -->
-
-<section class="section fade-up">
-    <h2>Our Facility</h2>
-
-    <p style="max-width:850px;margin:25px auto 0;color:#5c7a90;line-height:1.9;font-size:15px;">
-    Take a look inside our facility, where every stage of production is carried out with a focus on purity, hygiene and consistency.
-    </p>
-
-    <div class="factory-carousel">
-        <div class="factory-track">
-            <img src="factory1.jpg" alt="Filling & Packaging">
-            <img src="factory2.jpg" alt="Reverse Osmosis System">
-            <img src="factory3.jpg" alt="Stock Area">
-            <img src="factory4.jpg" alt="Blow Moulding Unit">
-        </div>
-    </div>
-
-</section>
-
-<!-- PRODUCTS WITH AUTO MESSAGE -->
-<!-- PRODUCTS -->
-
-<section class="section fade-up">
-    <h2>Our Collection</h2>
-<p style="max-width:850px;margin:25px auto 50px;color:#5c7a90;line-height:1.9;font-size:15px;">
-    Diana offers a range of premium packaged drinking water products, carefully crafted to meet the needs of the people.
-</p>
-
-<div class="product-carousel">
-    <div class="product-track">
-
-        <a class="product-slide"
-           href="https://wa.me/917795288098?text=Hi%2C%20I%20want%20to%20enquire%20about%20500ml%20water%20bottles"
-           target="_blank">
-            <img src="500mlbottle.png" alt="500 ML Bottle">
-            <div class="product-caption">500 ML Bottle</div>
-        </a>
-
-        <a class="product-slide"
-           href="https://wa.me/917795288098?text=Hi%2C%20I%20want%20to%20enquire%20about%20500ml%20cartons"
-           target="_blank">
-            <img src="500mlcarton.png" alt="500 ML Carton">
-            <div class="product-caption">500 ML Carton</div>
-        </a>
-
-        <a class="product-slide"
-           href="https://wa.me/917795288098?text=Hi%2C%20I%20want%20to%20enquire%20about%201L%20water%20bottles"
-           target="_blank">
-            <img src="1ltrbottle.png" alt="1 Liter Bottle">
-            <div class="product-caption">1 Liter Bottle</div>
-        </a>
-
-        <a class="product-slide"
-           href="https://wa.me/917795288098?text=Hi%2C%20I%20want%20to%20enquire%20about%201L%20cartons"
-           target="_blank">
-            <img src="1ltrcarton.png" alt="1 Liter Carton">
-            <div class="product-caption">1 Liter Carton</div>
-        </a>
+        <div class="loader"></div>
 
     </div>
-</div>
 
-<div class="coming-soon-grid">
 
-    <a class="coming-soon-card"
-       href="https://wa.me/917795288098?text=Hi%2C%20Please%20notify%20me%20when%20250ml%20bottles%20are%20available"
-       target="_blank"
-       style="text-decoration:none;color:#1f3a5f;">
-        <h3>250 ML Bottles</h3>
-        <br>
-        <p>Launching 1st July, 2026</p>
+
+    <!-- ===========================
+            HEADER
+    ============================ -->
+
+    <header id="header">
+
+        <div class="container nav-container">
+
+            <a href="#home" class="logo" aria-label="Diana Water Home">
+
+                <img src="images/logo.png" alt="Diana Water">
+
+            </a>
+
+            <nav>
+
+                <ul class="nav-links">
+
+    <li><a href="#home">Home</a></li>
+
+    <li><a href="#quality">Quality</a></li>
+
+    <li><a href="#products">Products</a></li>
+
+    <li><a href="#facility">Facility</a></li>
+
+    <li><a href="#contact">Contact</a></li>
+
+</ul>
+
+            </nav>
+
+            <a href="https://wa.me/917795288098"
+                target="_blank"
+                class="nav-btn">
+
+                Enquire Now
+
+            </a>
+
+    <button
+    class="mobile-menu"
+    type="button"
+    aria-label="Open navigation">
+
+    <i class="fa-solid fa-grip"></i>
+
+</button>
+
+        </div>
+
+    </header>
+
+
+
+
+
+    <!-- ===========================
+            HERO
+    ============================ -->
+
+    <section class="hero" id="home">
+
+        <!-- Floating Background -->
+
+        <div class="hero-bg">
+
+            <div class="circle circle1"></div>
+
+            <div class="circle circle2"></div>
+
+            <div class="circle circle3"></div>
+
+            <div class="wave wave1"></div>
+
+            <div class="wave wave2"></div>
+
+        </div>
+
+        <div class="container hero-grid">
+
+            <!-- LEFT -->
+
+            <div class="hero-content">
+
+                <span class="hero-subtitle">
+
+                PACKAGED DRINKING WATER
+
+                </span>
+
+                <h1>
+
+                    Pure Water,
+
+                    <br>
+
+                    Perfected
+
+                </h1>
+
+                <p>
+
+                    From our advanced purification process to hygienic bottling, every bottle of Diana is crafted to deliver consistent purity, refreshing taste and uncompromising quality.
+
+                </p>
+
+              <div class="hero-buttons">
+
+               
+
+    <a href="#products" class="primary-btn">
+
+        <i class="fa-solid fa-bottle-water"></i>
+
+        <span>Explore Products</span>
+
     </a>
 
-    <a class="coming-soon-card"
-       href="https://wa.me/917795288098?text=Hi%2C%20Please%20notify%20me%20when%2020L%20jars%20are%20available"
-       target="_blank"
-       style="text-decoration:none;color:#1f3a5f;">
-        <h3>20 Liter Jars</h3>
-        <br>
-        <p>Book Your Supply</p>
+    <a href="#contact" class="secondary-btn">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <span>Get a Quote</span>
+
     </a>
 
 </div>
 
-</section>
+                <div class="hero-features">
 
+                    <div>
 
+                        <i class="fa-solid fa-shield-halved"></i>
 
-<!-- CONTACT -->
-<section class="section fade-up">
-    <h2>Get in Touch</h2>
-    <div class="contact-box">
-        <div class="contact">
-            <a href="mailto:info@dianawater.in">info@dianawater.in</a>
-        </div>
-        <div class="contact">
-            <a href="tel:+917795288098">+91 77952 88098</a>
-        </div>
-    </div>
-</section>
+                        FSSAI Compliant
 
-<!-- FOOTER -->
-<div class="footer">
-    <img src="elite.png">
-    <div>Elite Enterprises</div>
+                    </div>
 
-    <div style="margin-top:12px;">
-        <a href="https://www.instagram.com/drinkdianawater" target="_blank" style="margin:0 10px; text-decoration:none; color:#1f3a5f;">
-            Instagram
+                    <div>
+
+                        <i class="fa-solid fa-droplet"></i>
+
+                        Multi-Stage Purification
+
+                    </div>
+
+                    <div>
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                        Reliable Supply
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+           <div class="hero-image">
+
+    <img
+    src="images/hero-bottle.jpg"
+    alt="Diana Premium Packaged Drinking Water Bottle"
+    class="main-bottle"
+    loading="eager"
+    fetchpriority="high"
+    draggable="false">
+
+    <div class="glow"></div>
+
+    <div class="shadow"></div>
+
+    <div class="hero-reviews">
+
+        <a href="https://www.google.com/search?q=diana+packaged+drinking+water&rlz=1C1ONGR_enIN929IN929&sourceid=chrome&ie=UTF-8#mpd=~11773656931810220468/customers/reviews"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <div class="review-stars">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <div class="review-content">
+
+                <strong>
+
+                    <i class="fab fa-google"></i>
+
+                    Google Reviews
+
+                </strong>
+
+                <span>Read what our customers say</span>
+
+            </div>
+
         </a>
 
-        <a href="https://www.linkedin.com/company/dianawater" target="_blank" style="margin:0 10px; text-decoration:none; color:#1f3a5f;">
-            LinkedIn
-        </a>
     </div>
 
-    <div style="margin-top:12px;">© 2026 Diana Water</div>
 </div>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/917795288098" target="_blank">
-    Order Here
+        </div>
+
+        <a href="#quality" class="scroll-down">
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </a>
+
+    </section>
+        <!-- ===========================
+            WHY DIANA
+    ============================ -->
+
+    <section class="why-diana" id="quality">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>WHY CHOOSE DIANA</span>
+
+                <h2>Crafted Around Quality</h2>
+
+                <p>
+                    Every bottle is purified through advanced treatment, carefully balanced with essential minerals, and hygienically bottled to deliver clean, refreshing drinking water every day.
+                </p>
+
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+                    <h3>Multi-Stage Purification</h3>
+
+                    <p>
+                        RO, UV and ozonization work together to help deliver clean, refreshing drinking water.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <h3>Strict Quality Standards</h3>
+
+                    <p>
+                        Every production batch undergoes rigorous quality testing before reaching our customers.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+
+                    <h3>Modern Infrastructure</h3>
+
+                    <p>
+                        Produced in a clean manufacturing environment with a strong focus on hygiene and consistency.
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+
+                    <h3>Trusted Delivery Solutions</h3>
+
+                    <p>
+                        Delivering fresh, hygienically bottled drinking water whenever and wherever it's needed.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ===========================
+            PRODUCTS
+    ============================ -->
+
+    <section class="products" id="products">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>OUR PRODUCTS</span>
+
+                <h2>Hydration for Every Occasion</h2>
+
+                <p>
+                    Whether you're at home, at work, travelling or hosting an event, Diana offers packaged drinking water in convenient sizes to suit every requirement.
+                </p>
+
+            </div>
+
+            <div class="products-grid">
+
+                <!-- 250 ML -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="images/250ml.jpg"
+                            alt="250 ml Bottle">
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>250 ml</h3>
+
+                        <p>
+                            Perfect for events, meetings, hospitality and on-the-go refreshment.
+                        </p>
+
+                        <a href="https://wa.me/917795288098?text=Hello,%20I'm%20interested%20in%20Diana%20250%20ml%20packaged%20drinking%20water.%20Please%20share%20pricing%20and%20availability."
+    target="_blank"
+    class="product-btn">
+
+    Get Quote
+
 </a>
 
-<script>
-window.addEventListener("load", () => {
-    setTimeout(()=>{
-        document.getElementById("preloader").style.display="none";
-    },2500);
-});
+                    </div>
 
-const elements = document.querySelectorAll(".fade-up");
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-    });
-},{ threshold:0.2 });
+                </div>
 
-elements.forEach(el=>observer.observe(el));
-</script>
+                <!-- 500 ML -->
+
+                <div class="product-card featured">
+
+                    <div class="product-badge">
+                        Popular
+                    </div>
+
+                    <div class="product-image">
+
+                        <img src="images/500ml.jpg"
+                            alt="500 ml Bottle">
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>500 ml</h3>
+
+                        <p>
+                            A convenient everyday companion for travel, work and daily hydration.
+                        </p>
+
+                        <a href="https://wa.me/917795288098?text=Hello,%20I'm%20interested%20in%20Diana%20500%20ml%20packaged%20drinking%20water.%20Please%20share%20pricing%20and%20availability."
+    target="_blank"
+    class="product-btn">
+
+    Get Quote
+
+</a>
+
+                    </div>
+
+                </div>
+
+                <!-- 1 L -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="images/1l.jpg"
+                            alt="1 L Bottle">
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>1 Litre</h3>
+
+                        <p>
+                            Ideal for homes, offices and long-lasting hydration throughout the day.
+                        </p>
+
+                        <a href="https://wa.me/917795288098?text=Hello,%20I'm%20interested%20in%20Diana%201%20Litre%20packaged%20drinking%20water.%20Please%20share%20pricing%20and%20availability."
+    target="_blank"
+    class="product-btn">
+
+    Get Quote
+
+</a>
+
+                    </div>
+
+                </div>
+
+                <!-- 20 L -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img src="images/20l.jpg"
+                            alt="20 L Jar">
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>20 Litre Jar</h3>
+
+                        <p>
+                            A practical solution for homes, offices, institutions and commercial spaces.
+                        </p>
+
+                        <a href="https://wa.me/917795288098?text=Hello,%20I'm%20interested%20in%20Diana%2020%20Litre%20jar.%20Please%20share%20pricing%20and%20availability."
+    target="_blank"
+    class="product-btn">
+
+    Get Quote
+
+</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ===========================
+            FEATURE SHOWCASE
+    ============================ -->
+
+    <section class="showcase">
+
+        <div class="container showcase-grid">
+
+            <div class="showcase-image">
+
+                <img
+    src="images/hero-bottle.jpg"
+    alt="Diana Premium Packaged Drinking Water"
+    loading="lazy"
+    draggable="false">
+
+            </div>
+
+            <div class="showcase-content">
+
+                <span>THE DIANA DIFFERENCE</span>
+
+                <h2>
+                    Committed to Purity in Every Bottle
+                </h2>
+
+                <p>
+
+                    At Diana, we are committed to delivering more than just packaged drinking water. Every bottle reflects our dedication to consistency, freshness and care, ensuring a refreshing experience that fits seamlessly into everyday life, from homes and workplaces to travel, hospitality and special occasions.
+
+                </p>
+
+                <ul class="showcase-list">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Modern Production Facility
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Hygienic Packaging
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Crystal Clear Taste
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Trusted Quality Standards
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ===========================
+            PURIFICATION PROCESS
+    ============================ -->
+
+    <section class="process">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>OUR PROCESS</span>
+
+                <h2>From Source to Every Sip</h2>
+
+                <p>
+                    Every bottle follows a carefully managed journey, where every stage is designed to preserve freshness, maintain consistency and deliver a refreshing drinking experience.
+                </p>
+
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+
+                    <h3>Water Source</h3>
+
+                    <p>Carefully sourced water enters our purification system.</p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+
+                    <h3>RO Filtration</h3>
+
+                    <p>Reverse Osmosis removes impurities and dissolved contaminants.</p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+
+                    <h3>UV Treatment</h3>
+
+                    <p>Ultraviolet purification helps eliminate microorganisms.</p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+
+                    <h3>Ozonization</h3>
+
+                    <p>Ozone treatment maintains freshness and product safety.</p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <h3>Mineral Balance</h3>
+
+                    <p>Essential minerals are balanced for a refreshing taste.</p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-vial-circle-check"></i>
+                    </div>
+
+                    <h3>Quality Testing</h3>
+
+                    <p>Each production batch undergoes strict quality inspection.</p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-bottle-water"></i>
+                    </div>
+
+                    <h3>Automated Bottling</h3>
+
+                    <p>Filled and sealed in hygienic automated production lines.</p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+
+                    <h3>Distribution</h3>
+
+                    <p>Delivered fresh to retailers, businesses and homes.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ===========================
+            OUR FACILITY
+    ============================ -->
+
+    <section class="facility" id="facility">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>OUR FACILITY</span>
+
+                <h2>Built for Quality, Designed for Consistency</h2>
+
+                <p>
+                   Our manufacturing facility is designed to support efficient production, hygienic bottling and consistent quality at every stage, helping us deliver refreshing water.
+                </p>
+
+            </div>
+
+            <div class="gallery">
+
+                <div class="gallery-item large">
+
+                    <img src="images/factory1.jpg"
+                        alt="Production Facility">
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <img src="images/factory2.jpg"
+                        alt="RO Plant">
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <img src="images/factory3.jpg"
+                        alt="Packaging">
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <img src="images/factory4.jpg"
+                        alt="Warehouse">
+
+                </div>
+
+                <div class="gallery-item">
+
+                    <img src="images/factory5.jpg"
+                        alt="Quality Lab">
+
+                </div>
+                 <div class="gallery-item">
+
+                    <img src="images/factory6.jpg"
+                        alt="Quality Lab">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ===========================
+            STATS
+    ============================ -->
+
+    <section class="stats">
+
+        <div class="container">
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h2 class="counter"
+                        data-target="11">0</h2>
+
+                    <span>Distributors</span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2 class="counter"
+                        data-target="163">0</h2>
+
+                    <span>Retail Partners</span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2 class="counter"
+                        data-target="5">0</h2>
+
+                    <span>Delivery Vehicles</span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2 class="counter"
+                        data-target="1000">0</h2>
+
+                    <span>Customers Served</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- ===========================
+            INDUSTRIES
+    ============================ -->
+
+    <section class="industries">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>INDUSTRIES WE SERVE</span>
+
+                <h2>Serving Every Sector with Confidence</h2>
+
+                <p>
+                    Whether it's a hotel, office, hospital, school or retail outlet, Diana delivers dependable packaged drinking water for every requirement.
+                </p>
+
+            </div>
+
+            <div class="industry-grid">
+
+                <div class="industry-card">
+                    <i class="fa-solid fa-hotel"></i>
+                    <h3>Hotels</h3>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h3>Restaurants</h3>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fa-solid fa-building"></i>
+                    <h3>Corporates</h3>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fa-solid fa-hospital"></i>
+                    <h3>Hospitals</h3>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fa-solid fa-school"></i>
+                    <h3>Schools</h3>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fa-solid fa-store"></i>
+                    <h3>Retail Stores</h3>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h3>Events</h3>
+                </div>
+
+                <div class="industry-card">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <h3>Distributors</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        <!-- ===========================
+            BULK ORDER CTA
+    ============================ -->
+
+    <section class="cta">
+
+        <div class="container cta-content">
+
+            <span>BULK ORDERS</span>
+
+            <h2>Dependable Supply for Your Business</h2>
+
+            <p>
+                Whether you're supplying a hotel, restaurant, office, retail store or event, Diana delivers dependable packaged drinking water backed by timely service and consistent quality.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="https://wa.me/917795288098"
+                   target="_blank"
+                   class="primary-btn">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Get Quote
+
+                </a>
+
+               <a href="tel:+917795288098" class="secondary-btn">
+    <i class="fa-solid fa-phone"></i>
+    Call Us
+</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ===========================
+            CONTACT
+    ============================ -->
+
+    <!-- ===========================
+        CONTACT
+=========================== -->
+
+<section class="contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>CONTACT US</span>
+
+            <h2>Start Your Enquiry</h2>
+
+            <p>
+                Whether you're looking for product information, bulk supply or a customised quotation, our team is ready to assist. Get in touch and we'll respond as soon as possible.
+            </p>
+
+        </div>
+
+        <div class="contact-grid">
+
+           <!-- Contact Information -->
+
+<div class="contact-info">
+
+    <!-- Address -->
+
+    <a href="https://maps.google.com/?q=Diana+Packaged+Drinking+Water"
+       target="_blank"
+       class="contact-card">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <div>
+
+            <h3>Address</h3>
+
+            <p>
+                Elite Enterprises, Uran Tola, Usri, Patna, Bihar
+            </p>
+
+        </div>
+
+    </a>
+
+    <!-- Phone -->
+
+    <a href="tel:+917795288098"
+       class="contact-card">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <div>
+
+            <h3>Speak with Us</h3>
+
+            <p>+91 77952 88098</p>
+
+        </div>
+
+    </a>
+
+    <!-- Email -->
+
+    <a href="mailto:info@dianawater.in"
+       class="contact-card">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <div>
+
+            <h3>Email</h3>
+
+            <p>info@dianawater.in</p>
+
+        </div>
+
+    </a>
+
+    <!-- WhatsApp -->
+
+    <a href="https://wa.me/917795288098"
+       target="_blank"
+       class="contact-card">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        <div>
+
+            <h3>Fast Support via WhatsApp</h3>
+
+            <p>Chat with us instantly</p>
+
+        </div>
+
+    </a>
+
+</div>
+
+
+
+            <!-- Contact Form -->
+
+            <form
+
+                class="contact-form"
+
+                autocomplete="on"
+
+                action="https://formsubmit.co/info@dianawater.in"
+
+                method="POST">
+
+                <!-- Hidden Settings -->
+
+                <input type="hidden" name="_subject" value="New Diana Water Website Enquiry">
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_template" value="table">
+
+                <input type="hidden" name="_next" value="https://dianawater.in">
+
+                <!-- Form Fields -->
+
+                <input
+
+                    type="text"
+
+                    name="name"
+
+                    placeholder="Your Name"
+
+                    required>
+
+                <input
+
+                    type="email"
+
+                    name="email"
+
+                    placeholder="Email Address"
+
+                    required>
+
+                <input
+
+                    type="tel"
+
+                    name="phone"
+
+                    placeholder="Phone Number"
+
+                    required>
+
+                <input
+
+                    type="text"
+
+                    name="company"
+
+                    placeholder="Company/Organization (Optional)">
+
+                <select
+
+                    name="product"
+
+                    required>
+
+                    <option value="">Product of Interest</option>
+
+                    <option>250 ml Bottle</option>
+
+                    <option>500 ml Bottle</option>
+
+                    <option>1 Litre Bottle</option>
+
+                    <option>20 Litre Jar</option>
+
+                    <option>Bulk Orders</option>
+
+                </select>
+
+                <textarea
+
+                    name="message"
+
+                    rows="6"
+
+                    placeholder="Share your requirements"
+
+                    required></textarea>
+
+                <button
+
+                    type="submit"
+
+                    class="primary-btn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Submit Enquiry
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- ===========================
+        MAP
+=========================== -->
+
+<section class="map">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>OUR LOCATION</span>
+
+            <h2>Visit Our Facility</h2>
+
+            <p>
+                Planning a visit? Find our manufacturing facility on the map below and get directions with ease.
+            </p>
+
+        </div>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.1983083506375!2d85.0126507!3d25.598325799999998!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed55d71fc06593%3A0xc5aa3eb6b8fa4270!2sDiana%20%E2%80%94%20Packaged%20Drinking%20Water!5e0!3m2!1sen!2sin!4v1782929070553!5m2!1sen!2sin"
+            width="100%"
+            height="500"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen=""
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+
+    </div>
+
+</section>
+
+
+
+    <!-- ===========================
+            FOOTER
+    ============================ -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-about">
+
+                    <img
+                        src="images/logo-white.png"
+                        alt="Diana Water">
+
+                    <p>
+
+                        Elite Enterprises is the company behind Diana Packaged Drinking Water, dedicated to delivering safe, refreshing drinking water.
+
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+    <li><a href="#home">Home</a></li>
+
+    <li><a href="#quality">Quality</a></li>
+
+    <li><a href="#products">Products</a></li>
+
+    <li><a href="#facility">Facility</a></li>
+
+    <li><a href="#contact">Contact</a></li>
+
+</ul>
+
+                </div>
+
+
+
+             <div>
+
+    <h3>Products</h3>
+
+    <ul>
+
+        <li>
+            <a href="#products">250 ml</a>
+        </li>
+
+        <li>
+            <a href="#products">500 ml</a>
+        </li>
+
+        <li>
+            <a href="#products">1 Litre</a>
+        </li>
+
+        <li>
+            <a href="#products">20 Litre Jar</a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+                <div>
+
+                    <h3>Stay Connected</h3>
+
+<div class="social-icons">
+
+    <a href="https://instagram.com/drinkdianawater"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <i class="fab fa-instagram"></i>
+
+    </a>
+
+    <a href="https://linkedin.com/company/dianawater"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <i class="fab fa-linkedin"></i>
+
+    </a>
+
+</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                © 2026 Diana Water by Elite Enterprises. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Floating WhatsApp -->
+
+    <a
+        href="https://wa.me/917795288098"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat on WhatsApp"
+        class="floating-whatsapp">
+
+        <i class="fab fa-whatsapp"></i>
+
+    </a>
+
+
+
+    <!-- Back To Top -->
+
+    <button
+        id="backToTop">
+
+        <i class="fa-solid fa-chevron-up"></i>
+
+    </button>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
