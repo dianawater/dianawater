@@ -499,19 +499,15 @@ HEADER BUTTON
 .nav-btn{
 
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
-    text-decoration:none;
 
     padding:15px 34px;
 
     border-radius:999px;
 
     color:#fff;
-
+    text-decoration:none;
     font-weight:600;
 
     background:linear-gradient(
@@ -522,15 +518,23 @@ HEADER BUTTON
 
     box-shadow:0 20px 40px rgba(13,110,253,.25);
 
-    transition:var(--transition);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    will-change:transform;
+
+    backface-visibility:hidden;
+
+    transform:translateZ(0);
 
 }
 
 .nav-btn:hover{
 
-    transform:translateY(-5px);
+    transform:translate3d(0,-4px,0);
 
-    box-shadow:0 28px 60px rgba(13,110,253,.35);
+    box-shadow:0 24px 48px rgba(13,110,253,.30);
 
 }
 
@@ -1034,8 +1038,9 @@ GOOGLE REVIEWS
 .review-content{
 
     display:flex;
-
     flex-direction:column;
+    align-items:flex-start;
+    text-align:left;
 
 }
 
@@ -1080,8 +1085,9 @@ GOOGLE REVIEWS
 .review-content{
 
     display:flex;
-
     flex-direction:column;
+    align-items:flex-start;
+    text-align:left;
 
 }
 
@@ -1340,8 +1346,21 @@ RESPONSIVE HERO
     .hero-grid{
 
         grid-template-columns:1fr;
-
         text-align:center;
+
+    }
+
+    .hero-content{
+
+        align-items:center;
+        text-align:center;
+        min-height:auto;
+
+    }
+
+    .hero-subtitle{
+
+        align-self:center;
 
     }
 
@@ -1370,14 +1389,35 @@ RESPONSIVE HERO
     .hero{
 
         padding-top:120px;
-
         min-height:auto;
 
     }
 
     .hero-grid{
 
-        gap:60px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        gap:40px;
+
+    }
+
+    .hero-content{
+
+        align-items:center;
+        text-align:center;
+        min-height:auto;
+
+    }
+
+    .hero-image{
+
+        align-items:center;
+        justify-content:center;
+        min-height:auto;
+        margin-top:0;
 
     }
 
@@ -1390,8 +1430,8 @@ RESPONSIVE HERO
     .hero-buttons{
 
         flex-direction:column;
-
         align-items:center;
+        width:100%;
 
     }
 
@@ -1399,7 +1439,6 @@ RESPONSIVE HERO
     .secondary-btn{
 
         width:100%;
-
         max-width:320px;
 
     }
@@ -1407,10 +1446,10 @@ RESPONSIVE HERO
     .hero-features{
 
         flex-direction:column;
-
         align-items:center;
-
+        justify-content:center;
         gap:18px;
+        margin-top:40px;
 
     }
 
@@ -3803,6 +3842,64 @@ section{
 
         display:none;
 
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero-content{
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-subtitle{
+        align-self: center;
+    }
+
+    .hero-content p{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero-grid{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .hero-content,
+    .hero-image{
+        min-height: auto;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero-image{
+        position:relative;
+        margin-top:0;
+        padding-bottom:120px;
+    }
+
+    .hero-reviews{
+        position:absolute;
+        left:50%;
+        bottom:0;
+        transform:translateX(-50%);
+        width:100%;
+        display:flex;
+        justify-content:center;
+        z-index:20;
+    }
+
+    .hero-reviews a{
+        min-width:380px;
+        max-width:380px;
     }
 
 }

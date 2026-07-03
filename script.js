@@ -59,10 +59,17 @@ navItems.forEach(link => {
 
         e.preventDefault();
 
-        target.scrollIntoView({
+        const headerOffset = 60;
 
-            behavior: "smooth",
-            block: "start"
+        const targetPosition =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerOffset;
+
+        window.scrollTo({
+
+            top: targetPosition,
+            behavior: "smooth"
 
         });
 
@@ -139,11 +146,19 @@ if (scrollButton) {
 
         if (section) {
 
-            section.scrollIntoView({
+            const headerOffset = 120;
 
-                behavior: "smooth"
+const targetPosition =
+    section.getBoundingClientRect().top +
+    window.pageYOffset -
+    headerOffset;
 
-            });
+window.scrollTo({
+
+    top: targetPosition,
+    behavior: "smooth"
+
+});
 
         }
 
