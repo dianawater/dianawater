@@ -3546,6 +3546,18 @@ TABLETS
 SMALL PHONES
 ==========================*/
 
+@media (max-width:768px){
+
+    .hero h1{
+
+        font-size:48px;
+        line-height:1.08;
+        letter-spacing:-1.8px;
+
+    }
+
+}
+
 @media(max-width:480px){
 
     h1{
@@ -3900,6 +3912,16 @@ section{
     .hero-reviews a{
         min-width:380px;
         max-width:380px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    section[id]{
+
+        scroll-margin-top:60px;
+
     }
 
 }
