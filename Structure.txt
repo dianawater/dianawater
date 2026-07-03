@@ -1,0 +1,20 @@
+diana-website/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+└── images/
+    ├── logo.png
+    ├── logo-white.png
+    ├── favicon.png
+    ├── hero-bottle.png
+    ├── 250ml.png
+    ├── 500ml.png
+    ├── 1l.png
+    ├── 20l.png
+    ├── factory1.jpg
+    ├── factory2.jpg
+    ├── factory3.jpg
+    ├── factory4.jpg
+    └── factory5.jpg
