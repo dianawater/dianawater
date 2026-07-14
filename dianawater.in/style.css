@@ -1199,7 +1199,7 @@ IMAGE
 
 .main-bottle{
 
-    width:400px;
+    width:520px;
 
     max-width:100%;
 
@@ -1832,27 +1832,7 @@ SHOWCASE
 }
 
 .showcase-image::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:420px;
-
-    height:420px;
-
-    border-radius:50%;
-
-    background:linear-gradient(
-
-        135deg,
-
-        rgba(56,199,245,.16),
-
-        rgba(13,110,253,.08)
-
-    );
-
+    display:none;
 }
 
 .showcase-image img{
@@ -3925,6 +3905,72 @@ section{
     }
 
 }
+
+@media (max-width:768px){
+
+    /* HERO */
+
+    .main-bottle{
+        width:360px !important;
+    }
+
+    /* DIANA DIFFERENCE */
+
+    .showcase-grid{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .showcase-image{
+        order:1;
+        min-height:auto;
+        margin-bottom:0;
+    }
+
+    .showcase-image img{
+        width:340px;
+    }
+
+    .showcase-content{
+        order:2;
+        margin-top:0;
+        text-align:center;
+    }
+
+}
+
+/* FINAL FIX */
+
+@media (max-width:768px){
+
+    .main-bottle{
+        width:360px !important;
+        max-width:none !important;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .showcase-grid{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:20px !important;
+    }
+
+    .showcase-image{
+        margin:0 !important;
+        min-height:auto !important;
+    }
+
+    .showcase-image img{
+        width:360px !important;
+        max-width:95% !important;
+    }
+
+}
+
 
 /*======================================================
     END OF STYLE.CSS
